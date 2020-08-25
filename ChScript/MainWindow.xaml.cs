@@ -42,6 +42,7 @@ namespace ChScript
         /// </summary>
         private void OpenFolder_Click(object sender, RoutedEventArgs e)
         {
+            _nameFileList.Clear();
             var dialog = new FolderBrowserDialog();
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -86,13 +87,18 @@ namespace ChScript
             DataTable scriptDB = Select("SELECT sc.Name FROM[dbo].[OSCRIPT_EXECUTED] as sc");
             var scriptDBList = new List<String>();
             for (int i = 0; i < scriptDB.Rows.Count; i++) scriptDBList.Add(scriptDB.Rows[i][0].ToString());
-            string status = "не выполнен";
+            
             _scriptsData = new BindingList<Scripts>();
             foreach (var file in _nameFileList)
             {
-                foreach (var nameFile in scriptDBList) if (file == nameFile) status = "выполнен";
+                string status = "не выполнен";
+                foreach (var nameFile in scriptDBList)
+                {
+                    if (file == nameFile) status = "выполнен";
+                }
                 _scriptsData.Add(new Scripts(file, status));
             }
+            
             scriptsList.ItemsSource = _scriptsData;
         }
         
@@ -107,28 +113,11 @@ namespace ChScript
                 switch (filterStatus.SelectedIndex)
                 {
                     case (0):
-                        //scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "выполнен");
-                        filtrScript.Clear();
-                        foreach (var scrData in _scriptsData)
-                        {
-                            if (scrData.StatusScript == "выполнен")
-                            {
-                                filtrScript.Add(scrData);
-                            }
-                        }
-                        scriptsList.ItemsSource = filtrScript;
+                        scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "выполнен").ToList();
+                       
                         break;
                     case (1):
-                        //scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "не выполнен");
-                        filtrScript.Clear();
-                        foreach (var scrData in _scriptsData)
-                        {
-                            if (scrData.StatusScript == "не выполнен")
-                            {
-                                filtrScript.Add(scrData);
-                            }
-                        }
-                        scriptsList.ItemsSource = filtrScript;
+                        scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "не выполнен").ToList();
                         break;
                     case (2):
                         scriptsList.ItemsSource = _scriptsData;
