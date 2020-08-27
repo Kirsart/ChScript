@@ -28,8 +28,6 @@ namespace ChScript
     public partial class MainWindow : Window
     {
         private BindingList<Scripts> _scriptsData = new BindingList<Scripts>();
-        //private List<String> _nameFileList = new List<String>();
-        //IEnumerable<FileInfo> _nameFileList;
         private string _directoryFile;
         private SqlConnection _sqlConnection;
 
@@ -39,7 +37,8 @@ namespace ChScript
         }
 
         /// <summary>
-        /// формирует списка имен файлов скриптов при нажатии ев кнопку "Папка"
+        /// формирует списка имен файлов скриптов при нажатие на  кнопку "Папка", вывод списко на экран
+        /// по умолчанию статус скриптов "не проверен"
         /// </summary>
         private void OpenFolder_Click(object sender, RoutedEventArgs e)
         {
@@ -50,7 +49,7 @@ namespace ChScript
                 AdressFolder.Text = _directoryFile;
                 DirectoryInfo directoryInfo = new DirectoryInfo(dialog.SelectedPath);
                 IEnumerable<FileInfo> nameFileList = directoryInfo.GetFiles("*.sql", SearchOption.TopDirectoryOnly);
-                foreach (var file in nameFileList) _scriptsData.Add(new Scripts(file.Name.Remove(file.Name.Length - 4, 4), "не выполнен"));
+                foreach (var file in nameFileList) _scriptsData.Add(new Scripts(file.Name.Remove(file.Name.Length - 4, 4), "не проверен"));
                 scriptsList.ItemsSource = _scriptsData;
             } 
         }
@@ -77,15 +76,20 @@ namespace ChScript
             return dataTable;
         }
         /// <summary>
-        /// формирует список скриптов, сравнивание их со списком файлов, вывод результата  в DataGrid
+        /// формирует список скриптов в бд, сравнивание их со списком файлов, вывод результата  в DataGrid
         /// </summary>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DataTable scriptDB = Select("SELECT sc.Name FROM[dbo].[OSCRIPT_EXECUTED] as sc");
             var scriptDBList = new List<String>();
             for (int i = 0; i < scriptDB.Rows.Count; i++) scriptDBList.Add(scriptDB.Rows[i][0].ToString());
-            foreach (var sd in _scriptsData) if (scriptDBList.Contains(sd.NameScript)) sd.StatusScript = "выполнен";
+            foreach (var sd in _scriptsData)
+            { 
+               sd.StatusScript = scriptDBList.Contains(sd.NameScript) ? "выполнен": "не выполнен";
+            }
+            scriptsList.ItemsSource = null;
             scriptsList.ItemsSource = _scriptsData;
+            
         }
         
         /// <summary>
