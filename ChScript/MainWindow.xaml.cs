@@ -27,8 +27,9 @@ namespace ChScript
     /// </summary>
     public partial class MainWindow : Window
     {
-        private BindingList<Scripts> _scriptsData;
-        private List<String> _nameFileList = new List<String>();
+        private BindingList<Scripts> _scriptsData = new BindingList<Scripts>();
+        //private List<String> _nameFileList = new List<String>();
+        //IEnumerable<FileInfo> _nameFileList;
         private string _directoryFile;
         private SqlConnection _sqlConnection;
 
@@ -42,19 +43,15 @@ namespace ChScript
         /// </summary>
         private void OpenFolder_Click(object sender, RoutedEventArgs e)
         {
-            _nameFileList.Clear();
             var dialog = new FolderBrowserDialog();
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 _directoryFile = dialog.SelectedPath;
                 AdressFolder.Text = _directoryFile;
                 DirectoryInfo directoryInfo = new DirectoryInfo(dialog.SelectedPath);
-                string name;
-                foreach (var file in directoryInfo.GetFiles("*.sql"))
-                {
-                    name = file.Name.Remove(file.Name.Length - 4, 4);
-                    _nameFileList.Add(name);
-                }
+                IEnumerable<FileInfo> nameFileList = directoryInfo.GetFiles("*.sql", SearchOption.TopDirectoryOnly);
+                foreach (var file in nameFileList) _scriptsData.Add(new Scripts(file.Name.Remove(file.Name.Length - 4, 4), "не выполнен"));
+                scriptsList.ItemsSource = _scriptsData;
             } 
         }
       
@@ -87,18 +84,7 @@ namespace ChScript
             DataTable scriptDB = Select("SELECT sc.Name FROM[dbo].[OSCRIPT_EXECUTED] as sc");
             var scriptDBList = new List<String>();
             for (int i = 0; i < scriptDB.Rows.Count; i++) scriptDBList.Add(scriptDB.Rows[i][0].ToString());
-            
-            _scriptsData = new BindingList<Scripts>();
-            foreach (var file in _nameFileList)
-            {
-                string status = "не выполнен";
-                foreach (var nameFile in scriptDBList)
-                {
-                    if (file == nameFile) status = "выполнен";
-                }
-                _scriptsData.Add(new Scripts(file, status));
-            }
-            
+            foreach (var sd in _scriptsData) if (scriptDBList.Contains(sd.NameScript)) sd.StatusScript = "выполнен";
             scriptsList.ItemsSource = _scriptsData;
         }
         
