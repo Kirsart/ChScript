@@ -58,7 +58,7 @@ namespace ChScript
         /// подключение к базе данных
         /// </summary>
         public DataTable Select(string selectSQL)
-        {
+        { 
             DataTable dataTable = new DataTable("dataBase");                                                                                // подключаемся к базе данных
             _sqlConnection = new SqlConnection($@"server={TextServer.Text};Trusted_Connection=Yes;DataBase={TextDB.Text};");
             try
@@ -83,13 +83,9 @@ namespace ChScript
             DataTable scriptDB = Select("SELECT sc.Name FROM[dbo].[OSCRIPT_EXECUTED] as sc");
             var scriptDBList = new List<String>();
             for (int i = 0; i < scriptDB.Rows.Count; i++) scriptDBList.Add(scriptDB.Rows[i][0].ToString());
-            foreach (var sd in _scriptsData)
-            { 
-               sd.StatusScript = scriptDBList.Contains(sd.NameScript) ? "выполнен": "не выполнен";
-            }
+            foreach (var sd in _scriptsData) sd.StatusScript = scriptDBList.Contains(sd.NameScript) ? "выполнен": "не выполнен";
             scriptsList.ItemsSource = null;
             scriptsList.ItemsSource = _scriptsData;
-            
         }
         
         /// <summary>
@@ -97,9 +93,6 @@ namespace ChScript
         /// </summary>
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var filtrScript = new BindingList<Scripts>();
-            try
-            {
                 switch (filterStatus.SelectedIndex)
                 {
                     case (0):
@@ -111,13 +104,9 @@ namespace ChScript
                     case (2):
                         scriptsList.ItemsSource = _scriptsData;
                         break;
-                }
-            }
-            catch (Exception)
-            {
-                scriptsList.ItemsSource = _scriptsData;
-            }   
+                } 
         }
+
         /// <summary>
         /// по клику "Установить скрипт" , устанавливает скрипты, на которых стоит метка, в БД 
         /// </summary>
@@ -127,16 +116,12 @@ namespace ChScript
             {
                 foreach (var script in _scriptsData.Where(x => x.IsMark == true))
                 {
-                    
-                    string connect = $@"server={TextServer.Text};Trusted_Connection=Yes;DataBase={TextDB.Text};";
-                    SqlConnection con = new SqlConnection(connect);
                     string [] separatingString  = { "GO" };
                     string scripts  = File.ReadAllText(_directoryFile + "\\" + script.NameScript + ".sql");
-                    string [] sepScripts = scripts.Split(separatingString, StringSplitOptions.RemoveEmptyEntries);
-                    con.Open();
+                    string [] sepScripts = scripts.Split(separatingString, StringSplitOptions.RemoveEmptyEntries);                
                     foreach (var i in sepScripts)
                     {
-                        var sqlCmd = new SqlCommand(i, con);
+                        var sqlCmd = new SqlCommand(i, _sqlConnection);
                         sqlCmd.ExecuteNonQuery();
                     }
                 }
