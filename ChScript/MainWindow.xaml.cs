@@ -104,7 +104,6 @@ namespace ChScript
                 {
                     case (0):
                         scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "выполнен").ToList();
-                       
                         break;
                     case (1):
                         scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "не выполнен").ToList();
