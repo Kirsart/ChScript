@@ -1,5 +1,5 @@
 ﻿<dx:DXWindow x:Class="ChScript.MainWindow"
-       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
         xmlns:lc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
@@ -7,7 +7,6 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="Script Check" Height="450" Width="800">
-    
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="21*"/>
@@ -23,7 +22,6 @@
         </Grid.RowDefinitions>
         <Button x:Name="OpenFolder" Grid.Column ="2" Grid.Row="0"  Content="Папка" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="98" Click="OpenFolder_Click" Height="20" Margin="9,13,0,0" Grid.ColumnSpan="2"/>
         <dxe:TextEdit x:Name="AdressFolder" Grid.Column ="3" Grid.Row="0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="618" RenderTransformOrigin="1.724,0.846" Margin="78,10,0,0" />
-        
         <dx:ScrollViewerBase Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3">
             <DataGrid x:Name="scriptsList"  AutoGenerateColumns="False"  >
                 <DataGrid.Columns>
@@ -40,18 +38,15 @@
         <lc:LayoutItemLabel Grid.Column="2" HorizontalAlignment="Left" Margin="9,73,0,0" Content="База данных:"  VerticalAlignment="Top" Height="16" Width="98" Grid.ColumnSpan="2"/>
         <ComboBox x:Name="filterStatus" Margin="550,97,10,0" Grid.Column="3" Height="23" VerticalAlignment="Top" SelectedIndex="2" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem>
-                <TextBlock>Выполненые</TextBlock>
+                <lc:LayoutItemLabel>Выполненые</lc:LayoutItemLabel>
             </ComboBoxItem>
             <ComboBoxItem>
-                <TextBlock>Не выполненые</TextBlock>
+                <lc:LayoutItemLabel>Не выполненые</lc:LayoutItemLabel>
             </ComboBoxItem>
             <ComboBoxItem>
-                <TextBlock>Все</TextBlock>
+                <lc:LayoutItemLabel>Все</lc:LayoutItemLabel>
             </ComboBoxItem>
         </ComboBox>
-
-
         <Button x:Name="usingScript" Content="Установить скрипт" Grid.Column="3" HorizontalAlignment="Left" Margin="246,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="144" Click="UsingScript_Click"/>
-
     </Grid>
 </dx:DXWindow>
