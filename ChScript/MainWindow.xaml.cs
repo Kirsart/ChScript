@@ -9,14 +9,14 @@ using ChScript.Models;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-
+using DevExpress.Xpf.Core;
 
 namespace ChScript
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : DXWindow
     {
         private BindingList<Scripts> _scriptsData = new BindingList<Scripts>();
         private string _directoryFile;
@@ -74,7 +74,7 @@ namespace ChScript
             DataTable scriptDB = Select("SELECT sc.Name FROM[dbo].[OSCRIPT_EXECUTED] as sc");
             var scriptDBList = new List<String>();
             for (int i = 0; i < scriptDB.Rows.Count; i++) scriptDBList.Add(scriptDB.Rows[i][0].ToString());
-            foreach (var sd in _scriptsData) sd.StatusScript = scriptDBList.Contains(sd.NameScript) ? "выполнен": "не выполнен";
+            foreach (var sd in _scriptsData) sd.StatusScript = scriptDBList.Contains(sd.NameScript) ? "выполнен" : "не выполнен";
             scriptsList.ItemsSource = null;
             scriptsList.ItemsSource = _scriptsData;
         }
@@ -84,24 +84,26 @@ namespace ChScript
         /// </summary>
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-                switch (filterStatus.SelectedIndex)
-                {
-                    case (0):
-                        scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "выполнен").ToList();
-                        break;
-                    case (1):
-                        scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "не выполнен").ToList();
-                        break;
-                    case (2):
-                        scriptsList.ItemsSource = _scriptsData;
-                        break;
-                } 
+            switch (filterStatus.SelectedIndex)
+            {
+                case (0):
+                    scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "выполнен").ToList();
+                    break;
+                case (1):
+                    scriptsList.ItemsSource = _scriptsData.Where(x => x.StatusScript == "не выполнен").ToList();
+                    break;
+                case (2):
+                    scriptsList.ItemsSource = _scriptsData;
+                    break;
+                default:
+                    break;
+            }
         }
 
         /// <summary>
         /// по клику "Установить скрипт" , устанавливает скрипты, на которых стоит метка, в БД 
         /// </summary>
-        private void usingScript_Click(object sender, RoutedEventArgs e)
+        private void UsingScript_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -122,6 +124,6 @@ namespace ChScript
             { 
                 System.Windows.MessageBox.Show("Отсутствует подключение к БД \n или не указана директория скриптов.", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-        }   
+        }
     }
 }

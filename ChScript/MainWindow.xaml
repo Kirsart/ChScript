@@ -1,13 +1,14 @@
-﻿<Window x:Class="ChScript.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<dx:DXWindow x:Class="ChScript.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ChScript"
-        mc:Ignorable="d"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:lc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="Script Check" Height="450" Width="800">
-    <Grid Background="#FFDECDCD">
+    
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="21*"/>
             <ColumnDefinition Width="18*"/>
@@ -21,9 +22,9 @@
             <RowDefinition Height="57*"/>
         </Grid.RowDefinitions>
         <Button x:Name="OpenFolder" Grid.Column ="2" Grid.Row="0"  Content="Папка" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="98" Click="OpenFolder_Click" Height="20" Margin="9,13,0,0" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="AdressFolder" Grid.Column ="3" Grid.Row="0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="618" RenderTransformOrigin="1.724,0.846" Margin="78,10,0,0" />
-
-        <ScrollViewer Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3">
+        <dxe:TextEdit x:Name="AdressFolder" Grid.Column ="3" Grid.Row="0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="618" RenderTransformOrigin="1.724,0.846" Margin="78,10,0,0" />
+        
+        <dx:ScrollViewerBase Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3">
             <DataGrid x:Name="scriptsList"  AutoGenerateColumns="False"  >
                 <DataGrid.Columns>
                     <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path= NameScript }"  Header= "Наименование" Width="*"/>
@@ -31,12 +32,12 @@
                     <DataGridCheckBoxColumn IsReadOnly="False" Binding="{Binding Path= IsMark }" Header="Метка" Width="75"/>
                 </DataGrid.Columns>
             </DataGrid>
-        </ScrollViewer>
-        <TextBox x:Name="TextServer" Grid.Column ="3" Grid.Row="0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="618" RenderTransformOrigin="1.724,0.846" Margin="78,38,0,0" />
-        <TextBox x:Name="TextDB" Grid.Column ="3" Grid.Row="0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="618" RenderTransformOrigin="1.724,0.846" Margin="78,66,0,0"  />
+        </dx:ScrollViewerBase>
+        <dxe:TextEdit x:Name="TextServer" Grid.Column ="3" Grid.Row="0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="618" RenderTransformOrigin="1.724,0.846" Margin="78,38,0,0" />
+        <dxe:TextEdit x:Name="TextDB" Grid.Column ="3" Grid.Row="0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="618" RenderTransformOrigin="1.724,0.846" Margin="78,66,0,0"  />
         <Button Content="Проверить скрипты" Grid.Column="3" HorizontalAlignment="Left" Margin="78,100,0,0" VerticalAlignment="Top" Width="132" Height="20" Click="Button_Click"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="9,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="98" Grid.ColumnSpan="2"><Run Text="Сервер"/><Run Text=":"/></TextBlock>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="9,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="98" Grid.ColumnSpan="2"><Run Text="База данных"/><Run Text=":"/></TextBlock>
+        <lc:LayoutItemLabel Grid.Column="2" HorizontalAlignment="Left" Margin="9,45,0,0" Content="Сервер:"  VerticalAlignment="Top" Height="16" Width="98" Grid.ColumnSpan="2"/>
+        <lc:LayoutItemLabel Grid.Column="2" HorizontalAlignment="Left" Margin="9,73,0,0" Content="База данных:"  VerticalAlignment="Top" Height="16" Width="98" Grid.ColumnSpan="2"/>
         <ComboBox x:Name="filterStatus" Margin="550,97,10,0" Grid.Column="3" Height="23" VerticalAlignment="Top" SelectedIndex="2" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem>
                 <TextBlock>Выполненые</TextBlock>
@@ -48,7 +49,9 @@
                 <TextBlock>Все</TextBlock>
             </ComboBoxItem>
         </ComboBox>
-        <Button x:Name="usingScript" Content="Установить скрипт" Grid.Column="3" HorizontalAlignment="Left" Margin="246,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="144" Click="usingScript_Click"/>
+
+
+        <Button x:Name="usingScript" Content="Установить скрипт" Grid.Column="3" HorizontalAlignment="Left" Margin="246,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="144" Click="UsingScript_Click"/>
 
     </Grid>
-</Window>
+</dx:DXWindow>

@@ -37,9 +37,456 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.Designer.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Charts.Designer.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.Charts.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Dashboard.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v14.1.Web.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Dashboard.v14.1.Web.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v14.1.Win.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Dashboard.v14.1.Win.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Data.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Data.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.DataAccess.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v14.1.UI.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.DataAccess.v14.1.UI.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.AuditTrail.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Chart.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.CloneObject.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.CloneObject.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Demos.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Demos.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.FileAttachment.Web.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.FileAttachment.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.HtmlPropertyEditor.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Kpi.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Kpi.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Objects.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotChart.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.PivotChart.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotChart.Web.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.PivotChart.Web.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotChart.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.PivotChart.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.PivotGrid.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Reports.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Reports.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Reports.Web.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Reports.Web.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Reports.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Reports.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Scheduler.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.Web.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Scheduler.Web.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Scheduler.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.ScriptRecorder.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.ScriptRecorder.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Security.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.StateMachine.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.StateMachine.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Validation.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Validation.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ViewVariantsModule.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.ViewVariantsModule.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Web.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Web.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Workflow.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Workflow.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Workflow.Win.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.ExpressApp.Workflow.Win.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Map.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Map.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Mvvm.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.Office.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Office.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.Pdf.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Pdf.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v14.1.Drawing">
+      <HintPath>Dll\DevExpress\DevExpress.Pdf.v14.1.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.PivotGrid.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.PivotGrid.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.Printing.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Printing.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.RichEdit.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.RichEdit.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Snap.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v14.1.Extensions.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Snap.v14.1.Extensions.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Snap.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Sparkline.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.SpellChecker.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.Spreadsheet.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Spreadsheet.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Utils.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Utils.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1.UI.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Utils.v14.1.UI.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Web.ASPxHtmlEditor.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Web.ASPxScheduler.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Web.ASPxSpellChecker.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Web.ASPxSpreadsheet.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Web.ASPxTreeList.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Web.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Charts.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Charts.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Charts.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.Charts.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Controls.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Controls.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Core.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.Core.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Docking.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.Docking.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Gauges.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.Gauges.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Grid.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Grid.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.Grid.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v14.1.Extensions">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Grid.v14.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v14.1.Core">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Layout.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.LayoutControl.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.LayoutControl.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.NavBar.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.NavBar.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PdfViewer.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.PdfViewer.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PdfViewer.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.PdfViewer.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PivotGrid.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.PivotGrid.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Printing.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.Printing.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PropertyGrid.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.PropertyGrid.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.ReportDesigner.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.ReportDesigner.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Ribbon.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.Ribbon.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.RichEdit.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.RichEdit.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.RichEdit.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.RichEdit.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Scheduler.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpf.Scheduler.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.SpellChecker.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.SpellChecker.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Spreadsheet.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Spreadsheet.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.DXStyle.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.DXStyle.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.HybridApp.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.HybridApp.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.LightGray.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.LightGray.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisDark.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.MetropolisDark.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisLight.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.MetropolisLight.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Black.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Office2007Black.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Blue.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Office2007Blue.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Silver.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Office2007Silver.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Black.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Office2010Black.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Blue.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Office2010Blue.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Silver.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Office2010Silver.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2013.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Office2013.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2013DarkGray.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Office2013DarkGray.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2013LightGray.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Office2013LightGray.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Seven.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.Seven.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.TouchlineDark.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.TouchlineDark.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.VS2010.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.Xpf.Themes.VS2010.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.Xpo.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraBars.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraCharts.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1.Wizard.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraCharts.v14.1.Wizard.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.XtraEditors.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraEditors.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraGauges.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.1.Presets.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraGauges.v14.1.Presets.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraGrid.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraLayout.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraNavBar.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPdfViewer.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraPdfViewer.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraPivotGrid.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.XtraPrinting.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraPrinting.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1.Extensions.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraReports.v14.1.Extensions.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraReports.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1.Web.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraReports.v14.1.Web.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v14.1">
+      <HintPath>Dll\DevExpress\DevExpress.XtraRichEdit.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v14.1.Extensions">
+      <HintPath>Dll\DevExpress\DevExpress.XtraRichEdit.v14.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v14.1.Extensions.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraRichEdit.v14.1.Extensions.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraRichEdit.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.1.Core.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraScheduler.v14.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.1.Extensions.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraScheduler.v14.1.Extensions.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.1.Reporting.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraScheduler.v14.1.Reporting.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraScheduler.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraSpellChecker.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraSpreadsheet.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraTreeList.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraVerticalGrid.v14.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v14.1.resources">
+      <HintPath>Dll\DevExpress\ru\DevExpress.XtraWizard.v14.1.resources.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>Dll\DevExpress\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
